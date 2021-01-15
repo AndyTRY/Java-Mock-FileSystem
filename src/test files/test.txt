@@ -1,0 +1,30 @@
+mkdir res sup
+echo "test" >> test1
+
+cd res 
+mkdir res res2
+echo "test" >> res5
+mkdir res3 res4
+
+cd res
+mkdir res31 res32
+echo "test" >> resfile31
+echo "test" >> res
+
+cd /
+cd sup
+mkdir res sup2
+echo "test" >> supfile1
+cd sup2
+echo "test" >> res
+
+search / /res -type f -name "res"
+search / -type d -name "res"
+
+
+search / -type d -name "dir2"
+search dir2 -type d -name "dir2"
+search / dir2 -type d -name "dir4"
+search / dir2 dfsdsf dir2 dir2 -type d -name "dir4"
+search / -type f -name "root_file1"
+search / dir1 -type f -name "file2"
